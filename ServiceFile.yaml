@@ -1,0 +1,11 @@
+apiVersion: v1 # Kubernetes API version
+kind: Service # Kubernetes resource kind we are creating
+metadata: # Metadata of the resource kind we are creating
+  name: k8sbuddies
+spec:
+  selector:
+    app: k8sbuddies
+  ports:
+    - port: 8082
+      targetPort: 8082
+  type: NodePort

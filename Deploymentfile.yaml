@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: k8sbuddies
+spec:
+  selector:
+    matchLabels:
+      app: k8sbuddies
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: k8sbuddies
+    spec:
+      containers:
+        - name: k8sbuddies
+          image: k8sbuddies:v1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8082
+          env: # Setting Environmental Variables
+            - name: DB_HOST   # Setting Database host address
+              value: mysql2
