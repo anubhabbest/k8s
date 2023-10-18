@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
   name: k8sbuddies
