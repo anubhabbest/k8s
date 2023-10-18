@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: k8sbuddies
-          image: k8sbuddies:v1
-          imagePullPolicy: Never
+          image: bootcampcommonregistry.azurecr.io/k8sbuddies:v1
           ports:
             - containerPort: 8082
           env: # Setting Environmental Variables
