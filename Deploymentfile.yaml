@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
   name: k8sbuddies
@@ -20,3 +20,5 @@ spec:
           env: # Setting Environmental Variables
             - name: DB_HOST   # Setting Database host address
               value: mysql2
+      imagePullSecrets:
+           - name: my-registry-secret
