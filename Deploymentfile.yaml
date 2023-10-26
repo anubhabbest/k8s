@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: k8sbuddies
-          image: bootcampcommonregistry.azurecr.io/k8sbuddies:v1
+          image: bootcampcommonregistry.azurecr.io/k8buddies-fest:v1.0
           ports:
             - containerPort: 8082
       imagePullSecrets:
