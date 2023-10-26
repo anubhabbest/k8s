@@ -17,8 +17,5 @@ spec:
           image: bootcampcommonregistry.azurecr.io/k8sbuddies:v1
           ports:
             - containerPort: 8082
-          env: # Setting Environmental Variables
-            - name: DB_HOST   # Setting Database host address
-              value: mysql2
       imagePullSecrets:
            - name: my-registry-secret
